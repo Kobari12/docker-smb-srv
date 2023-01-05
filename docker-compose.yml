@@ -1,0 +1,18 @@
+version: '3'
+services:
+  smbsrv:
+    image: dperson/samba
+    container_name: my-smb-server
+    command:
+      - "-p"
+      - "-r"
+      - "-u"
+      - "${USERNAME};${PASSWORD}"
+      - "-s"
+      - "share;/path1;yes;no;no;${USERNAME}"
+    ports:
+      - "139:139"
+      - "445:445"
+    volumes:
+      - ~/share:/share
+    restart: always
