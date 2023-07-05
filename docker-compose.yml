@@ -2,7 +2,7 @@ version: '3'
 services:
   smbsrv:
     image: dperson/samba
-    container_name: my-smb-server
+    container_name: smb
     command:
       - "-p"
       - "-r"
