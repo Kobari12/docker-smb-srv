@@ -3,13 +3,25 @@
 ```console
 $ git clone https://github.com/Kobari12/docker-smb-srv.git
 $ cd docker-smb-srv
+```
+
+```console
 $ vi .env
 
 USERNAME=*****
 PASSWORD=*****
-
-$ docker-compose up --build -d
 ```
 
-# ライセンス
-このプログラムは、MITライセンスで提供されています。詳細はLICENSEファイルをご覧ください。
+or
+
+
+```console
+$ echo "
+USERNAME=*****
+PASSWORD=*****
+" >> .env
+```
+
+```console
+$ docker-compose up --build -d
+```
